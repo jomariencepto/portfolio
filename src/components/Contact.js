@@ -15,6 +15,11 @@ export default function Contact({ darkMode }) {
   const githubUrl = 'https://github.com/jomariencepto';
   const linkedinUrl = 'https://www.linkedin.com/search/results/all/?keywords=Jomari%20Encepto';
 
+  const encode = (data) =>
+    Object.keys(data)
+      .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+      .join('&');
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -23,8 +28,15 @@ export default function Contact({ darkMode }) {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...formData }),
+    });
+
     setSubmitted(true);
     setFormData({ name: '', email: '', subject: '', message: '' });
     setTimeout(() => setSubmitted(false), 5000);
@@ -105,7 +117,9 @@ export default function Contact({ darkMode }) {
               </div>
             )}
 
-            <form onSubmit={handleSubmit} name="contact" method="POST" netlify="true">
+            <form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
+
               <div className="mb-6">
                 <label className={labelClass}>Name</label>
                 <input

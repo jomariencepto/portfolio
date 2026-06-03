@@ -29,7 +29,7 @@ export default function Hero({ darkMode }) {
         <h1 className={`${darkMode ? 'text-white' : 'text-slate-950'} text-5xl md:text-7xl font-bold mb-6`}>
           Hi, I'm Jomari Encepto, a{' '}
           <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-            Beginner Full-Stack Developer
+            Full-Stack Developer
           </span>
         </h1>
 

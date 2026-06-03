@@ -23,7 +23,7 @@ export default function About({ darkMode }) {
 
             <p className={`${darkMode ? 'text-slate-300' : 'text-slate-700'} text-lg mb-6 leading-relaxed`}>
               I have intermediate skills in HTML, CSS, JavaScript, and Python, with
-              beginner-level experience in React and Vue. I'm continuing to improve
+              entry experience in React and Vue. I'm continuing to improve
               through project-based learning and hands-on development.
             </p>
 
@@ -48,7 +48,7 @@ export default function About({ darkMode }) {
             <div className={`${darkMode ? 'card' : 'card-light'}`}>
               <h3 className={`${darkMode ? 'text-white' : 'text-slate-950'} text-xl font-bold mb-4`}>Frontend Development</h3>
               <p className={darkMode ? 'text-slate-300' : 'text-slate-700'}>
-                Intermediate in HTML, CSS, and JavaScript, with beginner experience in
+                Intermediate in HTML, CSS, and JavaScript, with experience in
                 React and Vue. I build responsive interfaces and continue strengthening
                 component-based frontend development.
               </p>

@@ -11,14 +11,14 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
 
   return (
-    <div className={`${darkMode ? 'bg-slate-900 text-slate-100' : 'bg-slate-50 text-slate-900'} min-h-screen transition-colors duration-300`}>
+    <div className={`${darkMode ? 'text-slate-100' : 'text-slate-900'} galaxy-shell min-h-screen transition-colors duration-300`}>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Hero darkMode={darkMode} />
-      <About darkMode={darkMode} />
-      <Skills darkMode={darkMode} />
-      <Projects darkMode={darkMode} />
-      <Contact darkMode={darkMode} />
-      <Footer darkMode={darkMode} />
+      <Hero darkMode={true} />
+      <About darkMode={true} />
+      <Skills darkMode={true} />
+      <Projects darkMode={true} />
+      <Contact darkMode={true} />
+      <Footer darkMode={true} />
     </div>
   );
 }

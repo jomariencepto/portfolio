@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaExternalLinkAlt, FaGithub, FaIceCream, FaReceipt, FaRobot } from 'react-icons/fa';
+import { FaGithub, FaIceCream, FaReceipt, FaRobot } from 'react-icons/fa';
 
 export default function Projects({ darkMode }) {
   const projects = [
@@ -65,22 +65,6 @@ export default function Projects({ darkMode }) {
                     </span>
                   ))}
                 </div>
-              </div>
-
-              <div className="flex gap-4">
-                <a href={project.liveLink} className="flex items-center space-x-2 text-blue-500 hover:text-blue-600 transition-colors flex-1 justify-center py-2 border border-blue-400 rounded-lg hover:bg-blue-500 hover:text-white font-semibold">
-                  <span>Details</span>
-                  <FaExternalLinkAlt size={14} />
-                </a>
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${darkMode ? 'text-slate-300 hover:text-white border-slate-600 hover:border-slate-400' : 'text-slate-700 hover:text-slate-950 border-slate-300 hover:border-slate-500'} flex items-center space-x-2 transition-colors flex-1 justify-center py-2 border rounded-lg font-semibold`}
-                >
-                  <span>Code</span>
-                  <FaGithub size={14} />
-                </a>
               </div>
             </div>
           ))}

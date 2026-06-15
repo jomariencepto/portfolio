@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaIceCream, FaReceipt, FaRobot } from 'react-icons/fa';
+import {  FaIceCream, FaReceipt, FaRobot } from 'react-icons/fa';
 
 export default function Projects({ darkMode }) {
   const projects = [
